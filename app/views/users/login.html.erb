@@ -1,0 +1,25 @@
+
+<%= form_for(@user, url: "/users/login_authenticate")  do | f | %>
+<%#= form_for ([@user], url: {action: :login_authenticate},method: :put) do | f | %>
+
+<table>
+
+
+      <tr>
+        <td><%= f.label :email%></td>
+        <td><%= f.email_field :email%></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password%></td>
+        <td><%= f.password_field :password%></td>
+      </tr>
+
+      <tr>
+        <td><%= f.submit "Sign in"%></td>
+      </tr>
+
+<tr>
+        <td><%= link_to"sign up",new_user_path%></td>
+      </tr>
+      </table>
+  <%end%>
